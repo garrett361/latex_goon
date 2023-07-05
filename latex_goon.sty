@@ -8,12 +8,17 @@
 \usepackage{slashed} %Dirac slash notation
 \usepackage{graphicx} %For including graphics
 \usepackage{framed}	 %For framing areas
-\usepackage{latex_goon/jcapmod_goon} %Loads edited version of the jcapmod style file, which must be placed in same folder as tex file
+\usepackage{latex_goon/jcapmod_goon} %Loads edited version of the jcapmod style file.
 \usepackage{latex_goon/minted} %For code
 
 
-% New commands:
+% Minted environments for python
+\newminted[py]{python}{frame=lines, framesep=2mm, baselinestretch=1.2, bgcolor=lightgray, fontsize=\footnotesize, linenos}
+\newmintinline[pyinline]{python}{}
+\newmintedfile[pyfile]{python}{frame=lines, framesep=2mm, baselinestretch=1.2, bgcolor=lightgray, fontsize=\footnotesize, linenos}
 
+
+% New commands:
 \newcommand{\Acal}{\mathcal{A}}
 \newcommand{\Bcal}{\mathcal{B}}
 \newcommand{\Ccal}{\mathcal{C}}
@@ -204,7 +209,6 @@ cross/.style={cross out, draw=black, minimum size=.2cm, inner sep=0pt, outer sep
 
 
 %Sets how deep the table of contents goes.  Setting to 3 goes all the way to displaying subsubsections, 2 stops at subsection, etc.
-
 \setcounter{tocdepth}{3}
 
 %Allow equations across pages
