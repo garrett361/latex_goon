@@ -12,6 +12,7 @@
 \usepackage{slashed} %Dirac slash notation
 \usepackage{tcolorbox}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%  Minted %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Minted environments for python
 \newminted[py]{python}{bgcolor=lightgray, fontsize=\footnotesize, linenos}
@@ -19,7 +20,8 @@
 \newmintedfile[pyfile]{python}{bgcolor=lightgray, fontsize=\footnotesize, linenos}
 
 
-% New commands:
+%%%%%%%%%%%%%%%%%%%%%%%%%%  New commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \newcommand{\Acal}{\mathcal{A}}
 \newcommand{\Bcal}{\mathcal{B}}
 \newcommand{\Ccal}{\mathcal{C}}
@@ -109,6 +111,7 @@
 %For making symbols both bolded and mathcal-ed.  use as in \mathbfcal{A}
 \DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%  tikz %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Modified from Flip Tanedo's original
 \usepackage{tikz}
@@ -183,17 +186,22 @@ cross/.style={cross out, draw=black, minimum size=.2cm, inner sep=0pt, outer sep
 \newcommand*\varphilinefull{\tikz[baseline=-0.6ex]{ \draw[line width=1.2pt] (-1,0) -- (1,0);}}
 \newcommand*\Philine{\tikz[baseline=-0.6ex]{  \draw[blue, dotted,line width=1.2pt] (-.5,0) -- (.5,0);}}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%  Custom environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % For italicizing paragraphs
 \newenvironment{itquote}
   {\begin{quote}\itshape}
   {\end{quote}\ignorespacesafterend}
+
 \newenvironment{itpars}
   {\par\itshape}
   {\par}
 
-  %Geometry of pdf output
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%  Geometry of pdf output %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
  %%With \oddsidemargin = \evensidemargin = 0 then the total width of the page W = 2(1+x) + w, where x is the \hoffset and w is the \textwidth
 \setlength{\oddsidemargin}{0.2in}
 \setlength{\evensidemargin}{\oddsidemargin}
