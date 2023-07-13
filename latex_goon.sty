@@ -198,7 +198,10 @@ cross/.style={cross out, draw=black, minimum size=.2cm, inner sep=0pt, outer sep
   {\par}
 
 
-
+  \newenvironment{nicebox}[1]
+    {\begin{tcolorbox}[colback=red!5!white,colframe=reddish,title=#1]    }
+    {
+    \end{tcolorbox}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%  Geometry of pdf output %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
