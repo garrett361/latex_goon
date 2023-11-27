@@ -2,7 +2,9 @@
 
 
 %Importing various packages
-
+\usepackage[noend]{algpseudocode}
+\usepackage[utf8]{inputenc}
+\usepackage{algorithm}
 \usepackage{amsmath} %Displaying equations nicely
 \usepackage{amssymb} %Standard math symbols
 \usepackage{framed}	 %For framing areas
@@ -217,6 +219,17 @@ cross/.style={cross out, draw=black, minimum size=.2cm, inner sep=0pt, outer sep
     {
     \end{tcolorbox}}
 
+  \newenvironment{commentbox}[1]
+    {\begin{tcolorbox}[colback=white,colframe=black,title=#1]    }
+    {
+    \end{tcolorbox}}
+
+  \newenvironment{algo}[1]
+    {\begin{algorithm}    
+    \caption{#1}    
+    \begin{algorithmic}[1]    }
+    {\end{algorithmic}
+    \end{algorithm}    }
 %%%%%%%%%%%%%%%%%%%%%%%%%%  Geometry of pdf output %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
  %%With \oddsidemargin = \evensidemargin = 0 then the total width of the page W = 2(1+x) + w, where x is the \hoffset and w is the \textwidth
