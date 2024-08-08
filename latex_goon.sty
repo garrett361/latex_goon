@@ -127,6 +127,9 @@
 %For making symbols both bolded and mathcal-ed.  use as in \mathbfcal{A}
 \DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
 
+\newcommand{\argmin}[1]{\underset{#1}{\rm arg\,min}\,}
+\newcommand{\argmax}[1]{\underset{#1}{\rm arg\,max}\,}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%  tikz %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Modified from Flip Tanedo's original
@@ -225,8 +228,8 @@ cross/.style={cross out, draw=black, minimum size=.2cm, inner sep=0pt, outer sep
     \end{tcolorbox}}
 
   \newenvironment{algo}[1]
-    {\begin{algorithm}    
-    \caption{#1}    
+    {\begin{algorithm}
+    \caption{#1}
     \begin{algorithmic}[1]    }
     {\end{algorithmic}
     \end{algorithm}    }
